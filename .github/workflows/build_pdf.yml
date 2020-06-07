@@ -4,6 +4,10 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: listdir
+        run: ls
+      - name: printpwd
+        run: pwd
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
