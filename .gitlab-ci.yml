@@ -1,0 +1,7 @@
+compile_pdf:
+  image: aergus/latex
+  script:
+    - latexmk -r .latexmkrc -pdf 'cv.tex' -jobname=resume
+  artifacts:
+    paths:
+      - ./build/cv.pdf
