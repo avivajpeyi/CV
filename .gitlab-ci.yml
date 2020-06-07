@@ -1,7 +1,7 @@
 compile_pdf:
-  image: aergus/latex
+  image: registry.gitlab.com/islandoftex/images/texlive:latest
   script:
-    - latexmk -r .latexmkrc -pdflatex=lualatex -pdf 'cv.tex' -jobname=resume
+    - make
   artifacts:
     paths:
       - ./build/cv.pdf
